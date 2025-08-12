@@ -1,11 +1,17 @@
 <body>
     <p> Hello </p>
     <script>
-        let age=14;
-        let maxAge=80;
-        let numPerDay = 5 
+        let age=window.prompt("Enter your age ", "0");
+        let maxAge=window.prompt("Enter your maximum age", "0");
+        let numPerDay = window.prompt("Enter how much of your favorite snack you can eat per day", "0");
         let totalRequired = (numPerDay * 365) * (maxAge - age);
-        document.write( "You will need " + totalRequired + " packs of cookies to last you until the ripe old age of " + maxAge);
+        let sure = window.confirm('Are you sure your input is correct?' + age + " " + maxAge + " " + numPerDay);
+        if(sure) {
+            document.write("You will need " + totalRequired + " packs of cookies to last you until the ripe old age of " + maxAge);
+        }
+        else {
+  document.write("Run the code again ");
+}
         //let, var, const
 
     </script>
